@@ -1,0 +1,13 @@
+.title {
+  color: red;
+  text-align: center;
+  font-weight: 200;
+}
+
+h1 {
+  font-style: italic;
+}
+
+:global(.test) {
+  font-style: italic;
+}
