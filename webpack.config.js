@@ -21,6 +21,14 @@ module.exports = {
             { test: /\.css$/, use: ['style-loader', 'css-loader'] },
             { test: /\.(png|woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: 'url-loader?limit=100000' },
             { test: /\.scss$/, use: ['style-loader', 'css-loader?modules&localIdentName=[path][name]-[local]-[hash:5]', 'sass-loader'] }
+            // {
+            //     test: /\.json$/,
+            //     exclude: /node_modules/,
+            //     use: {
+            //         // included by default (https://webpack.js.org/loaders/json-loader/)
+            //         loader: 'json-loader'
+            //     }
+            // }
         ]
     },
     resolve: {
