@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Spin, Alert } from 'antd';
+import { Spin, Alert, Pagination } from 'antd';
 // import fetchJSONP  from 'fetch-jsonp'
 import MovieItem from './MovieItem' 
-
 
 export default class MovieList extends Component {
     constructor(props) {
@@ -69,11 +68,25 @@ export default class MovieList extends Component {
             />
         </Spin>)
         } else {
-            return (<div style={{display:'flex', flexWrap:'wrap'}}>
+            return (<div>
+                <div style={{display:'flex', flexWrap:'wrap'}}>
                 {this.state.movies.map(item => {
                     return <MovieItem key = {item.id} {...item}></MovieItem>
                 })}
+            </div>
+            <div>
+            <Pagination defaultCurrent={this.state.nowPage} total={this.state.total} pageSize={this.state.pageSize} 
+            onChange={this.pageChanged}/>
+            </div>
             </div>)
         }
+    }
+
+    pageChanged = (page) => {
+        // // 使用BOM, 不是最佳方式
+        // window.location.href = `/#/movie/${this.state.movieType}/${page}`
+
+        // 编程式导航
+        this.props.history.push(`/movie/${this.state.movieType}/${page}`)
     }
 }

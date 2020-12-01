@@ -33,7 +33,7 @@ class App extends Component {
                         <Menu.Item key="movie">
                             <Link to="/movie/in_threaters/1">电影</Link>
                         </Menu.Item> 
-                        <Menu.Item key="about ">
+                        <Menu.Item key="about">
                             <Link to="/about">关于</Link>
                         </Menu.Item>
                     </Menu>
