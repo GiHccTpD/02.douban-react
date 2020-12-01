@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Menu } from 'antd';
 
-const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 import { Route, Link } from 'react-router-dom';
 

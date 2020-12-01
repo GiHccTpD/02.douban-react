@@ -14,7 +14,7 @@ export default class MovieList extends Component {
             isLoading: true,
             movieType: props.match.params.type
 
-        }
+        } 
     }
 
     // 组件接受新属性
